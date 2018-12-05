@@ -38,3 +38,7 @@ class goal {
     string goalName;
     int balanceGoal;
 };
+
+void apple() {
+    cout << "Hello!" << endl;
+}
