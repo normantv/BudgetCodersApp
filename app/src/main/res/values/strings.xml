@@ -1,3 +1,15 @@
-<resources>
-    <string name="app_name">BudgetCodersApp</string>
+<resources tools:ignore="ExtraTranslation" xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Budget Coders</string>
+    <string name="Budget_Coders">Budget Coders</string>
+    <string name="button_SendHome">Getting Started</string>
+    <string name="username">Username:</string>
+    <string name="password">Password:</string>
+    <string name="username_input">Enter Username</string>
+    <string name="password_input">Enter Password</string>
+    <string name="noAccount">Don\'t Have an Account?</string>
+    <string name="account_create">Create One!</string>
+    <string name="first_and_last">First and Last Name:</string>
+    <string name="email">Email:</string>
+    <string name="confrim_password">Confirm Password:</string>
+    <string name="create_accnt">Create Account</string>
 </resources>
