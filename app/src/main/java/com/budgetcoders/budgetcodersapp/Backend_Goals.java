@@ -1,5 +1,7 @@
 package com.budgetcoders.budgetcodersapp;
 
+import java.net.URL;
+
 public class Goals {
 
     // Goal Name
@@ -19,6 +21,7 @@ public class Goals {
     int getBalanceGoal() {
         return balanceGoal;
     }
+
 
     // Variable Declarations
     private String goalName;
