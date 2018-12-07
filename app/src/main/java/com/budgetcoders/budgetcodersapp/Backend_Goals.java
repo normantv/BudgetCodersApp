@@ -2,7 +2,7 @@ package com.budgetcoders.budgetcodersapp;
 
 import java.net.URL;
 
-public class Goals {
+public class Backend_Goals {
 
     // Goal Name
     void setGoalName(String name) {

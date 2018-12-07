@@ -7,7 +7,7 @@ import java.time.Period;
 import java.util.Calendar;
 import java.util.Date;
 
-public class UserProfile {
+public class Backend_UserProfile {
 
     // Personal Information
 

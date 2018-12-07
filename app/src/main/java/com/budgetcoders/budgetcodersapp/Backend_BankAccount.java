@@ -1,6 +1,6 @@
 package com.budgetcoders.budgetcodersapp;
 
-public class BankAccount {
+public class Backend_BankAccount {
 
     // Bank Name
         void setBankName(String bank) {
