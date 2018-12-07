@@ -19,9 +19,9 @@
         <activity android:name=".Login_Screen" />
         <activity android:name=".Account_Creation" />
         <activity android:name=".Overview" />
-        <activity android:name=".Progress" />
-        <activity android:name=".Provider_Select" />
-        <activity android:name=".Parent_Control"></activity>
+        <activity android:name=".Parent_Control" />
+        <activity android:name=".Menu" />
+        <activity android:name=".Milestones"></activity>
     </application>
 
 </manifest>
