@@ -13,14 +13,13 @@ public class Login_Screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login__screen);
 
-        toAccountCreate = (Button) findViewById(R.id.button2);
+        toAccountCreate = findViewById(R.id.button2);
 
 
         toAccountCreate.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick (View view){
                 goToAccountCreate();
-                finish();
             }
         });
 
@@ -29,7 +28,7 @@ public class Login_Screen extends AppCompatActivity {
 
     private void goToAccountCreate() {
 
-        Intent intent = new Intent(this, Account_Creation.class);
-        startActivity(intent);
+        Intent intent2 = new Intent(this, Account_Creation.class);
+        startActivity(intent2);
     }
 }
