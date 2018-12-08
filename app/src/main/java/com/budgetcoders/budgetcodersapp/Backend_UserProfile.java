@@ -1,5 +1,9 @@
 package com.budgetcoders.budgetcodersapp;
 
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -7,7 +11,29 @@ import java.time.Period;
 import java.util.Calendar;
 import java.util.Date;
 
+@Entity(tableName = "user_table")
 public class Backend_UserProfile {
+
+    @PrimaryKey
+    @NonNull
+    private String firstName;
+
+    @NonNull
+    private String lastName;
+
+    @NonNull
+    private String email;
+
+    @NonNull
+    private String password;
+
+    // All at once
+    public Backend_UserProfile(String firstName, String lastName, String email, String password) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+    }
 
     // Personal Information
 
@@ -16,23 +42,8 @@ public class Backend_UserProfile {
                 firstName = str;
             }
 
-            String getFirstName() {
+            public String getFirstName() {
                 return firstName;
-            }
-
-        // Middle Name (should be optional)
-            void setMiddleName(String str) {
-                    middleName = str;
-                }
-
-            String getMiddleName() {
-                if (!middleName.equals("")) {
-                    return middleName;
-                }
-                else {
-                    System.out.println("No Middle Name");
-                    return "";
-                }
             }
 
         // Last Name
@@ -40,68 +51,9 @@ public class Backend_UserProfile {
                 lastName = str;
             }
 
-            String getLastName() {
+            public String getLastName() {
                 return lastName;
             }
-
-    // Birthday
-
-        // Birthday Day
-            void setBirthDay(int num) {
-                if (num <= 31 && num >= 1) {
-                    birthDay = num;
-                }
-                else {
-                    System.out.println("Please enter valid day.");
-                }
-            }
-
-            int getBirthDay() {
-                return birthDay;
-            }
-
-        // Birthday Month
-            void setBirthMonth(int num) {
-                if (num <= 12 && num >= 1) {
-                    birthMonth = num;
-                }
-                else {
-                    System.out.println("Please enter valid month.");
-                }
-            }
-
-            int getBirthMonth() {
-                return birthMonth;
-            }
-
-        //Birthday Year
-            void setBirthYear(int num) {
-                Calendar cal = Calendar.getInstance();
-                int currentYear = Calendar.getInstance().get(Calendar.YEAR);
-
-                if (num <= currentYear) {
-                    birthYear = num;
-                }
-                else {
-                    System.out.println("Please enter valid year.");
-                }
-            }
-
-            int getBirthYear() {
-                return birthYear;
-            }
-
-
-    // Current Age
-    /*
-    int (Date birthDate, Date currentDate) {
-        DateFormat formatter = new SimpleDateFormat("yyyyMMdd");
-        int d1 = Integer.parseInt(formatter.format(birthDate));
-        int d2 = Integer.parseInt(formatter.format(currentDate));
-        int age = (d2 - d1) / 10000;
-        return age;
-    }
-    */
 
     // Account Information
         // Email
@@ -114,42 +66,19 @@ public class Backend_UserProfile {
                 }
             }
 
-            String getEmail() {
+            public String getEmail() {
                 return email;
             }
 
         // Password
-            void setPasswordTryA(String str) {
-                passwordTryA = str;
+
+            void setPassword(String password) {
+                this.password = password;
             }
 
-            void setPasswordTryB(String str) {
-                passwordTryB = str;
+            public String getPassword() {
+                return password;
             }
 
-            private boolean checkPassword() {
-                return passwordTryA.equals(passwordTryB);
-            }
 
-            void setPassword() {
-                if (checkPassword()) {
-                    password = passwordTryA;
-                }
-                else {
-                    System.out.println("Passwords do not match");
-                }
-            }
-
-    private String firstName;
-    private String middleName;
-    private String lastName;
-
-    private int birthDay;
-    private int birthMonth;
-    private int birthYear;
-
-    private String email;
-    private String password;
-    private String passwordTryA;
-    private String passwordTryB;
 }
