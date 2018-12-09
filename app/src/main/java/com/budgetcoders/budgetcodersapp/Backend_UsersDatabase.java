@@ -5,7 +5,7 @@ import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
-@Database(entities = {Backend_UserProfile.class}, version = 1)
+@Database(entities = {Backend_UserProfile.class}, version = 1, exportSchema = false)
 public abstract class Backend_UsersDatabase extends RoomDatabase {
 
     public abstract Backend_UserDAO Backend_UserDAO();

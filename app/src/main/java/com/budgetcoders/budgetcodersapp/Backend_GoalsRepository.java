@@ -11,7 +11,7 @@ public class Backend_GoalsRepository {
     private LiveData<List<Backend_Goals>> allGoals;
 
     Backend_GoalsRepository(Application application) {
-        GoalsRoomDatabase db = GoalsRoomDatabase.getDatabase(application);
+        Backend_GoalsRoomDatabase db = Backend_GoalsRoomDatabase.getDatabase(application);
         goalsDAO = db.backend_goalsDAO();
         allGoals = goalsDAO.getAllGoals();
 

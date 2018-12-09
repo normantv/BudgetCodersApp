@@ -1,10 +1,15 @@
 package com.budgetcoders.budgetcodersapp;
 
+import android.app.Activity;
+import android.arch.persistence.room.Room;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import java.lang.ref.WeakReference;
 
 public class Account_Creation extends AppCompatActivity {
 
@@ -14,6 +19,7 @@ public class Account_Creation extends AppCompatActivity {
     private EditText FirstName;
     private EditText LastName;
 
+    //Backend_UsersDatabase db;
     Backend_UsersDatabase db;
 
     @Override
@@ -39,9 +45,14 @@ public class Account_Creation extends AppCompatActivity {
                 String Passwordstring = Password.getText().toString();
                 String Emailstring = Email.getText().toString();
 
-                Backend_UserProfile me = new Backend_UserProfile(FirstNamestring, LastNamestring, Emailstring, Passwordstring);
+                final Backend_UserProfile me = new Backend_UserProfile(FirstNamestring, LastNamestring, Emailstring, Passwordstring);
 
-                db.Backend_UserDAO().insert(me);
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        db.Backend_UserDAO().insert(me);
+                    }
+                }) .start();
 
 
                 finish();
