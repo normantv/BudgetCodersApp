@@ -1,6 +1,5 @@
 package com.budgetcoders.budgetcodersapp;
 
-import android.icu.text.IDNA;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,10 +20,10 @@ public class Login_Screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login__screen);
 
-        Username = (EditText)findViewById(R.id.editText);
-        Password = (EditText)findViewById(R.id.editText2);
+        Username = (EditText)findViewById(R.id.goalname);
+        Password = (EditText)findViewById(R.id.balancegoal);
         Info = (TextView)findViewById(R.id.textView9);
-        toMenu = (Button)findViewById(R.id.button4);
+        toMenu = (Button)findViewById(R.id.login);
 
         Info.setText("Number of Attempts Remaining: 5");
         toMenu.setOnClickListener(new View.OnClickListener() {
