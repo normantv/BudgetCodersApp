@@ -18,6 +18,6 @@ public interface Backend_UserDAO {
     LiveData<List<Backend_UserProfile>> getAllUsers();
 
     @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH)
-    @Query("SELECT password FROM user_table WHERE email == :inputEmail")
-    public Backend_UserProfile[] loadMatchingInfo(String inputEmail);
+    @Query("SELECT * FROM user_table")
+    public Backend_UserProfile[] loadMatchingInfo();
 }

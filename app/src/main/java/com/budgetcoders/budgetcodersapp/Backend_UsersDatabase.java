@@ -16,7 +16,7 @@ public abstract class Backend_UsersDatabase extends RoomDatabase {
         if (INSTANCE == null) {
             synchronized (Backend_UsersDatabase.class) {
                 if (INSTANCE == null) {
-                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(), Backend_UsersDatabase.class, "user_database")
+                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(), Backend_UsersDatabase.class, "user_database").allowMainThreadQueries()
                             .build();
                 }
             }
