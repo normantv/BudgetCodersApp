@@ -12,4 +12,5 @@
     <string name="email">Email:</string>
     <string name="confrim_password">Confirm Password:</string>
     <string name="create_accnt">Create Account</string>
+    <string name="logo">Logo</string>
 </resources>
