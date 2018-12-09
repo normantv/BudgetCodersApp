@@ -4,6 +4,7 @@ import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
+import android.arch.persistence.room.RoomWarnings;
 
 import java.util.List;
 
@@ -15,4 +16,8 @@ public interface Backend_UserDAO {
 
     @Query("Select * FROM user_table")
     LiveData<List<Backend_UserProfile>> getAllUsers();
+
+    @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH)
+    @Query("SELECT password FROM user_table WHERE email == :inputEmail")
+    public Backend_UserProfile[] loadMatchingInfo(String inputEmail);
 }

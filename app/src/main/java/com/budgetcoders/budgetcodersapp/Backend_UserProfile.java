@@ -16,16 +16,13 @@ public class Backend_UserProfile {
 
     @PrimaryKey
     @NonNull
-    private String firstName;
+    private String password;
 
-    @NonNull
-    private String lastName;
-
-    @NonNull
     private String email;
 
-    @NonNull
-    private String password;
+    private String firstName;
+
+    private String lastName;
 
     // All at once
     public Backend_UserProfile(String firstName, String lastName, String email, String password) {
