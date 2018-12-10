@@ -5,6 +5,7 @@ import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProvider;
 import android.arch.lifecycle.ViewModelProviders;
 import android.arch.persistence.room.Room;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -76,13 +77,23 @@ public class Login_Screen extends AppCompatActivity {
                 if (loginArray[i].getPassword().equals(userPassword)) {
                     Intent intent = new Intent(Login_Screen.this, Overview.class);
                     startActivity(intent);
+                    finish();
                 }
             }
         }
-        counter--;
-        Info.setText("Number of Attempts Remaining: " + String.valueOf(counter));
-        if(counter == 0){
-            toMenu.setEnabled(false);
+        Handler handler = new Handler();
+        Runnable r = new Runnable() {
+            @Override
+            public void run() {
+                counter--;
+                Info.setText("Number of Attempts Remaining: " + String.valueOf(counter));
+                if(counter == 0){
+                    toMenu.setEnabled(false);
+                }
+            }
+        };
+        handler.postDelayed(r, 2000);
         }
+
     }
-}
+

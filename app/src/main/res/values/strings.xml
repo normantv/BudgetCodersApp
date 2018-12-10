@@ -25,4 +25,6 @@
     <string name="christmas_fund">Christmas Fund</string>
     <string name="next_goal">Next Goal:</string>
     <string name="edit">Edit</string>
+    <string name="snack_bar">Passwords do not match!</string>
+    <string name="snack_bar_dismiss">dismiss</string>
 </resources>
