@@ -83,18 +83,19 @@ public class Login_Screen extends AppCompatActivity {
         Backend_UsersDatabase db;
         db = Backend_UsersDatabase.getDatabase(this);
         Backend_UserProfile[] loginArray = db.Backend_UserDAO().loadMatchingInfo();
-        String password1 = loginArray[0].getPassword();
-        String username1 = loginArray[0].getEmail();
 
-        if((userName.equals(userName)) && (userPassword.equals(password1))){
-            Intent intent = new Intent(Login_Screen.this, Menu.class);
-            startActivity(intent);
-        }else{
-            counter--;
-            Info.setText("Number of Attempts Remaining: " + String.valueOf(counter));
-            if(counter == 0){
-                toMenu.setEnabled(false);
+        for (int i = 0; i < loginArray.length; i++) {
+            if (loginArray[i].getEmail().equals(userName)) {
+                if (loginArray[i].getPassword().equals(userPassword)) {
+                    Intent intent = new Intent(Login_Screen.this, Overview.class);
+                    startActivity(intent);
+                }
             }
+        }
+        counter--;
+        Info.setText("Number of Attempts Remaining: " + String.valueOf(counter));
+        if(counter == 0){
+            toMenu.setEnabled(false);
         }
     }
 }
