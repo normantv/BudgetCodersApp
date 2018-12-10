@@ -7,40 +7,35 @@
     android:layout_height="match_parent"
     tools:fillViewport="true">
 
-    <android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="@+id/account2TextView"
+        app:layout_constraintTop_toBottomOf="@+id/account2TextView"
         tools:context=".Overview">
-
-        <View
-            android:id="@+id/rect_initial"
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:layout_alignParentTop="true"
-            android:background="#DDDDDD"
-            android:visibility="visible"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton" />
-        <View
-            android:id="@+id/rect0"
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="16dp"
-            android:background="#DDDDDD"
-            android:visibility="visible"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button3" />
 
         <View
             android:id="@+id/rect1"
             android:layout_width="match_parent"
-            android:layout_height="10dp"
+            android:layout_height="6dp"
             android:layout_alignParentTop="true"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="375dp"
+            android:background="#DDDDDD"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+        <View
+            android:id="@+id/rect"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="88dp"
             android:background="#DDDDDD"
             android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
@@ -49,82 +44,108 @@
         <View
             android:id="@+id/rect2"
             android:layout_width="match_parent"
-            android:layout_height="10dp"
+            android:layout_height="5dp"
             android:layout_alignParentTop="true"
+            android:layout_marginTop="172dp"
             android:background="#DDDDDD"
             android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button6" />
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
         <View
             android:id="@+id/rect3"
             android:layout_width="match_parent"
-            android:layout_height="10dp"
+            android:layout_height="5dp"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="256dp"
             android:background="#DDDDDD"
             android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button3" />
-
-        <View
-            android:id="@+id/rect4"
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="13dp"
-            android:background="#DDDDDD"
-            android:visibility="visible"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView20" />
-
-
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/account1TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="37dp"
+            android:layout_marginTop="28dp"
             android:text="@string/vacation_fund"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-            android:textColor="@android:color/holo_green_dark"
+            android:textColor="#4cd964"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView14"
             tools:text="@string/vacation_fund" />
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/account1TextView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="60dp"
-            android:text="@string/savings"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="52dp"
+            android:text="Bank Name 1"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-            android:textColor="@android:color/holo_green_dark"
+            android:textColor="#4cd964"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+            app:layout_constraintTop_toBottomOf="@+id/textView14"
+            tools:text="@string/vacation_fund" />
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/account2TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="56dp"
+            android:text="@string/savings"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textColor="#4cd964"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/account1TextView" />
+
+        <TextView
+            android:id="@+id/account2TextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="80dp"
+            android:text="@string/savings"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textColor="#4cd964"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/account1TextView" />
+
+        <TextView
+            android:id="@+id/account2TextView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="164dp"
+            android:text="@string/savings"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textColor="#4cd964"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/account1TextView" />
+
+        <TextView
+            android:id="@+id/account3TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="64dp"
             android:text="@string/christmas_fund"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-            android:textColor="@android:color/holo_green_dark"
+            android:textColor="#4cd964"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+            app:layout_constraintTop_toBottomOf="@+id/account2TextView" />
 
         <TextView
             android:id="@+id/textView14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
+            android:layout_marginStart="96dp"
             android:layout_marginTop="8dp"
             android:text="Amount Saved Here"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -132,16 +153,32 @@
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="64dp"
             android:text="@string/saved_until_now"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
-            android:textColor="@android:color/holo_green_dark"
+            android:textColor="#4cd964"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="68dp"
+            android:layout_marginEnd="202dp"
+            android:layout_marginBottom="24dp"
+            android:text="Overview"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            android:textColor="#4cd964"
+            app:layout_constraintBottom_toTopOf="@+id/textView10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/amount1TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="52dp"
@@ -149,11 +186,11 @@
             android:text="Amount1"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
             android:textColor="@android:color/black"
-            app:layout_constraintStart_toEndOf="@+id/textView11"
+            app:layout_constraintStart_toEndOf="@+id/account1TextView"
             app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
         <TextView
-            android:id="@+id/textView16"
+            android:id="@+id/amount2TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="104dp"
@@ -161,11 +198,11 @@
             android:text="Amount2"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
             android:textColor="@android:color/black"
-            app:layout_constraintStart_toEndOf="@+id/textView12"
-            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+            app:layout_constraintStart_toEndOf="@+id/account2TextView"
+            app:layout_constraintTop_toBottomOf="@+id/amount1TextView" />
 
         <TextView
-            android:id="@+id/textView17"
+            android:id="@+id/amount3TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
@@ -173,32 +210,8 @@
             android:text="Amount3"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
             android:textColor="@android:color/black"
-            app:layout_constraintStart_toEndOf="@+id/textView13"
-            app:layout_constraintTop_toBottomOf="@+id/textView16" />
-
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:background="@android:color/white"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/overview" />
-
-        <TextView
-            android:id="@+id/textView18"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="132dp"
-            android:layout_marginTop="28dp"
-            android:text="@string/next_goal"
-            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
-            android:textColor="@android:color/holo_green_dark"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView17"
-            tools:text="@string/next_goal" />
+            app:layout_constraintStart_toEndOf="@+id/account3TextView"
+            app:layout_constraintTop_toBottomOf="@+id/amount2TextView" />
 
         <Button
             android:id="@+id/button3"
@@ -208,7 +221,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="28dp"
             android:text="@string/edit"
-            app:layout_constraintStart_toEndOf="@+id/textView15"
+            app:layout_constraintStart_toEndOf="@+id/amount1TextView"
             app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
         <Button
@@ -219,7 +232,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="36dp"
             android:text="@string/edit"
-            app:layout_constraintStart_toEndOf="@+id/textView16"
+            app:layout_constraintStart_toEndOf="@+id/amount2TextView"
             app:layout_constraintTop_toBottomOf="@+id/button3" />
 
         <Button
@@ -230,31 +243,23 @@
             android:layout_marginStart="33dp"
             android:layout_marginTop="36dp"
             android:text="@string/edit"
-            app:layout_constraintStart_toEndOf="@+id/textView17"
+            app:layout_constraintStart_toEndOf="@+id/amount3TextView"
             app:layout_constraintTop_toBottomOf="@+id/button5" />
 
-        <Button
-            android:id="@+id/button7"
-            style="@style/Widget.AppCompat.Button.Small"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="24dp"
-            android:text="@string/edit"
-            app:layout_constraintStart_toEndOf="@+id/textView20"
-            app:layout_constraintTop_toBottomOf="@+id/button6" />
-
-        <TextView
-            android:id="@+id/textView20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="133dp"
-            android:layout_marginTop="8dp"
-            android:text="Amount 4"
-            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
-            android:textSize="18sp"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="83dp"
+            app:layout_constraintBottom_toTopOf="@+id/rect1"
+            app:layout_constraintEnd_toStartOf="@+id/textView19"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/graph" />
 
     </android.support.constraint.ConstraintLayout>
 

@@ -23,9 +23,6 @@ public class Login_Screen extends AppCompatActivity {
     private TextView Info;
     private Button toMenu;
     private int counter = 5;
-    private Backend_UserViewModel userViewModel;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,16 +36,6 @@ public class Login_Screen extends AppCompatActivity {
         toMenu = (Button)findViewById(R.id.button4);
 
         Info.setText("Number of Attempts Remaining: 5");
-
-        // USERVIEWMODEL
-        userViewModel = ViewModelProviders.of(this).get(Backend_UserViewModel.class);
-
-       // userViewModel.getAllProfiles().observe(this, new Observer<List<Backend_UserProfile>>() {
-       //     @Override
-       //     public void onChanged(@Nullable final List<Backend_UserProfile> words) {
-       //     }
-       // });
-
 
         toMenu.setOnClickListener(new View.OnClickListener() {
             @Override

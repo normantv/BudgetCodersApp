@@ -2,6 +2,13 @@ package com.budgetcoders.budgetcodersapp;
 
 public class Backend_BankAccount {
 
+    Backend_BankAccount(String bankName, String accountName, int balance) {
+        this.bankName = bankName;
+        this.accountName = accountName;
+        this.balance = balance;
+
+    }
+
     // Bank Name
         void setBankName(String bank) {
             bankName = bank;
