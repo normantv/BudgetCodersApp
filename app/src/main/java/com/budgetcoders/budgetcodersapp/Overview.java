@@ -1,6 +1,7 @@
 package com.budgetcoders.budgetcodersapp;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -30,6 +31,8 @@ public class Overview extends AppCompatActivity {
     private TextView amount3TextView;
 
     private TextView totalAmount;
+
+    private Button TEMPORARYBUTTON;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +77,8 @@ public class Overview extends AppCompatActivity {
         editAccount2 = (Button)findViewById(R.id.button5);
         editAccount3 = (Button)findViewById(R.id.button6);
 
+        TEMPORARYBUTTON = (Button)findViewById(R.id.button8);
+
 
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
 
@@ -98,7 +103,7 @@ public class Overview extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         vacationFund.setBalance(Integer.parseInt(input.getText().toString()));
                         String balance1 = Integer.toString(vacationFund.getBalance());
-                        amount1TextView.setText(balance1);
+                        amount1TextView.setText("$" + balance1);
 
                         int balance1int = vacationFund.getBalance();
                         int balance2int = savings.getBalance();
@@ -128,7 +133,7 @@ public class Overview extends AppCompatActivity {
 
                         savings.setBalance(Integer.parseInt(input.getText().toString()));
                         String balance2 = Integer.toString(savings.getBalance());
-                        amount2TextView.setText(balance2);
+                        amount2TextView.setText("$" + balance2);
 
                         int balance1int = vacationFund.getBalance();
                         int balance2int = savings.getBalance();
@@ -159,7 +164,7 @@ public class Overview extends AppCompatActivity {
 
                         christmasFund.setBalance(Integer.parseInt(input.getText().toString()));
                         String balance3 = Integer.toString(christmasFund.getBalance());
-                        amount3TextView.setText(balance3);
+                        amount3TextView.setText("$" + balance3);
 
                         int balance1int = vacationFund.getBalance();
                         int balance2int = savings.getBalance();
@@ -170,6 +175,18 @@ public class Overview extends AppCompatActivity {
                 });
             }
         });
+
+        TEMPORARYBUTTON.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String totalAmountSavedString = totalAmount.getText().toString().replace("$", "");
+                final int totalAmountSaved = Integer.parseInt(totalAmountSavedString);
+                Intent intent = new Intent(Overview.this, Goal_Creation.class);
+                intent.putExtra("totalAmount", totalAmountSaved);
+                startActivity(intent);
+            }
+        });
+
     }
 
 

@@ -17,7 +17,7 @@ public abstract class Backend_GoalsRoomDatabase extends RoomDatabase {
                 if (INSTANCE == null) {
                     // Create database here
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                            Backend_GoalsRoomDatabase.class, "goals_database").build();
+                            Backend_GoalsRoomDatabase.class, "goals_database").allowMainThreadQueries().build();
                 }
             }
         }

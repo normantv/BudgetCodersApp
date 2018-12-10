@@ -67,8 +67,8 @@
             android:id="@+id/account1TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="52dp"
             android:text="@string/vacation_fund"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
             android:textColor="#4cd964"
@@ -80,8 +80,8 @@
             android:id="@+id/account1TextView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="52dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="28dp"
             android:text="Bank Name 1"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
             android:textColor="#4cd964"
@@ -93,7 +93,7 @@
             android:id="@+id/account2TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="12dp"
             android:layout_marginTop="56dp"
             android:text="@string/savings"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
@@ -105,11 +105,13 @@
             android:id="@+id/account2TextView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="4dp"
             android:text="@string/savings"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
             android:textColor="#4cd964"
+            app:layout_constraintBottom_toTopOf="@+id/account2TextView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/account1TextView" />
 
@@ -117,8 +119,8 @@
             android:id="@+id/account2TextView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="164dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="116dp"
             android:text="@string/savings"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
             android:textColor="#4cd964"
@@ -129,8 +131,8 @@
             android:id="@+id/account3TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="64dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="60dp"
             android:text="@string/christmas_fund"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
             android:textColor="#4cd964"
@@ -140,12 +142,17 @@
         <TextView
             android:id="@+id/textView14"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="21dp"
             android:layout_marginStart="96dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="103dp"
+            android:layout_marginBottom="11dp"
             android:text="Amount Saved Here"
+            android:textAlignment="center"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
             android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/rect1"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -153,11 +160,13 @@
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="96dp"
-            android:layout_marginTop="64dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="60dp"
             android:text="@string/saved_until_now"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
             android:textColor="#4cd964"
+            android:textSize="30sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -166,8 +175,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="68dp"
+            android:layout_marginTop="15dp"
             android:layout_marginEnd="202dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="18dp"
             android:text="Overview"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
             android:textColor="#4cd964"
@@ -175,7 +185,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/amount1TextView"
@@ -218,9 +229,10 @@
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="28dp"
             android:text="@string/edit"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/amount1TextView"
             app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
@@ -229,9 +241,10 @@
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="32dp"
             android:text="@string/edit"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/amount2TextView"
             app:layout_constraintTop_toBottomOf="@+id/button3" />
 
@@ -240,9 +253,10 @@
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="33dp"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="36dp"
             android:text="@string/edit"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/amount3TextView"
             app:layout_constraintTop_toBottomOf="@+id/button5" />
 
@@ -251,7 +265,7 @@
             android:layout_width="0dp"
             android:layout_height="32dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="9dp"
+            android:layout_marginTop="15dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="83dp"
             app:layout_constraintBottom_toTopOf="@+id/rect1"
@@ -260,6 +274,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/graph" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="136dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="136dp"
+            android:layout_marginBottom="39dp"
+            android:text="Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rect3" />
 
     </android.support.constraint.ConstraintLayout>
 

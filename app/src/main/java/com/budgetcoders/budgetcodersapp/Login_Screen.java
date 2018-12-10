@@ -12,8 +12,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.content.Intent;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.support.v7.widget.AppCompatCheckBox;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
+
 
 import java.util.List;
 
@@ -24,6 +29,7 @@ public class Login_Screen extends AppCompatActivity {
     private TextView Info;
     private Button toMenu;
     private int counter = 5;
+    private AppCompatCheckBox checkB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +41,19 @@ public class Login_Screen extends AppCompatActivity {
         Password = (EditText)findViewById(R.id.editText2);
         Info = (TextView)findViewById(R.id.textView9);
         toMenu = (Button)findViewById(R.id.button4);
+        checkB = (AppCompatCheckBox)findViewById(R.id.hintpass);
+
+        checkB.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if (isChecked) {
+                    // show password
+                    Password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                } else {
+                    // hide password
+                    Password.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                }}
+        });
 
         Info.setText("Number of Attempts Remaining: 5");
 
@@ -93,7 +112,6 @@ public class Login_Screen extends AppCompatActivity {
             }
         };
         handler.postDelayed(r, 2000);
-        }
-
     }
 
+}
