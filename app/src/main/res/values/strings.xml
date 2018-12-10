@@ -19,4 +19,10 @@
     <string name="goal_balance">Goal balance</string>
     <string name="create_goal">Create goal!</string>
     <string name="to_menu">Login</string>
+    <string name="saved_until_now">Saved Until Now:</string>
+    <string name="vacation_fund">Vacation Fund</string>
+    <string name="savings">Savings</string>
+    <string name="christmas_fund">Christmas Fund</string>
+    <string name="next_goal">Next Goal:</string>
+    <string name="edit">Edit</string>
 </resources>
