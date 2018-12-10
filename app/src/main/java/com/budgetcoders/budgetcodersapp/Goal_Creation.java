@@ -48,6 +48,7 @@ public class Goal_Creation extends AppCompatActivity {
 
 
         remainingToNext = (TextView)findViewById(R.id.textView15);
+        remainingToNext.setText("");
 
         createGoal.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,7 +96,7 @@ public class Goal_Creation extends AppCompatActivity {
 
                 int remainingToNextGoal = currentGoalInt - intValue;
 
-                remainingToNext.setText(Integer.toString(remainingToNextGoal));
+                remainingToNext.setText("You are $" + Integer.toString(remainingToNextGoal) + " away!");
 
                 nextGoal.setText(currentGoalName);
                 nextGoalAmount.setText("$" + Integer.toString(currentGoalInt));
