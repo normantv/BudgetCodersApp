@@ -55,7 +55,7 @@ public class Overview extends AppCompatActivity {
         amount3TextView = (TextView)findViewById(R.id.amount3TextView);
 
         final Backend_BankAccount vacationFund = new Backend_BankAccount("Bank of America", "Vacation Fund", 0);
-        final Backend_BankAccount savings = new Backend_BankAccount("Banco Popular de Puerto Rico", "Savings", 0);
+        final Backend_BankAccount savings = new Backend_BankAccount("Bank of Boston", "Savings", 0);
         final Backend_BankAccount christmasFund = new Backend_BankAccount("Bank of America", "Christmas Fund", 0);
 
         account1TextView.setText(vacationFund.getAccountName());
