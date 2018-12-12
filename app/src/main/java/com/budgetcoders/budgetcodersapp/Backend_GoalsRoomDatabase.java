@@ -11,6 +11,7 @@ public abstract class Backend_GoalsRoomDatabase extends RoomDatabase {
 
     private static volatile Backend_GoalsRoomDatabase INSTANCE;
 
+    // Abstraction layer for database
     static Backend_GoalsRoomDatabase getDatabase(final Context context) {
         if (INSTANCE == null) {
             synchronized (Backend_GoalsRoomDatabase.class) {

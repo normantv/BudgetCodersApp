@@ -6,7 +6,10 @@ import android.os.AsyncTask;
 
 import java.util.List;
 
+// This file is part of the required files to make Android Room Databases work correctly
+
 public class Backend_GoalsRepository {
+    // Declare variables
     private Backend_GoalsDAO goalsDAO;
     private LiveData<List<Backend_Goals>> allGoals;
 
@@ -21,10 +24,12 @@ public class Backend_GoalsRepository {
         return allGoals;
     }
 
+    // wrapper method for executing insert Goal in the background
     public void insert(Backend_Goals goal) {
         new insertAsyncTask(goalsDAO).execute(goal);
     }
 
+    // Allows tasks to be done in the background and not make the UI hang
     private static class insertAsyncTask extends AsyncTask<Backend_Goals, Void, Void> {
 
         private Backend_GoalsDAO mAsyncTaskDao;

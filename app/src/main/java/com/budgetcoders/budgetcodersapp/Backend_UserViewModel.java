@@ -6,6 +6,8 @@ import android.arch.lifecycle.LiveData;
 
 import java.util.List;
 
+// File used to provide a way of viewing a table with database values if needed
+
 public class Backend_UserViewModel extends AndroidViewModel {
     private Backend_UserRepository userRepository;
 

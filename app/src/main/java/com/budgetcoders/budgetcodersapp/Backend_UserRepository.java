@@ -6,7 +6,10 @@ import android.os.AsyncTask;
 
 import java.util.List;
 
+// This file is part of the required files to make Android Room Databases work correctly
+
 public class Backend_UserRepository {
+    // Declare variables
     private Backend_UserDAO userDAO;
     private LiveData<List<Backend_UserProfile>> allUsers;
 
@@ -21,11 +24,12 @@ public class Backend_UserRepository {
     }
 
 
-
+    // wrapper method for executing insert UserProfile in the background
     public void insert(Backend_UserProfile userProfile) {
         new insertAsyncTask(userDAO).execute(userProfile);
     }
 
+    // Allows tasks to be done in the background and not make the UI hang
     private static class insertAsyncTask extends AsyncTask<Backend_UserProfile, Void, Void> {
         private Backend_UserDAO mAsyncTaskDAO;
 
