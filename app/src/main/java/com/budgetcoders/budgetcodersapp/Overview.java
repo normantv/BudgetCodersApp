@@ -14,7 +14,7 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 public class Overview extends AppCompatActivity {
-
+//Declaring variables
     private Button editAccount1;
     private Button editAccount2;
     private Button editAccount3;
@@ -38,7 +38,7 @@ public class Overview extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_overview);
-
+        //Linking variables with GUI elements
         editAccount1 = (Button)findViewById(R.id.button3);
         editAccount2 = (Button)findViewById(R.id.button5);
         editAccount3 = (Button)findViewById(R.id.button6);

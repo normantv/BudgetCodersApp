@@ -53,6 +53,7 @@ public class Account_Creation extends AppCompatActivity {
                 String ConfirmPasswordstring = ConfirmPassword.getText().toString();
                 String Emailstring = Email.getText().toString();
 
+                //stores the user's information into the database when passwords match
                 if (ConfirmPasswordstring.equals(Passwordstring))
                 {
                     final Backend_UserProfile me = new Backend_UserProfile(FirstNamestring, LastNamestring, Emailstring, Passwordstring);
@@ -66,7 +67,7 @@ public class Account_Creation extends AppCompatActivity {
 
                     finish();
                 }
-
+                //Show a banner at the bottom of the page when passwords not matched
                 else
                 {
                     Snackbar.make(view, R.string.snack_bar,Snackbar.LENGTH_LONG)

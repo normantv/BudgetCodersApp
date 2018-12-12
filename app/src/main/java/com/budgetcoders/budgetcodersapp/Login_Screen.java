@@ -23,6 +23,7 @@ import android.text.method.PasswordTransformationMethod;
 import java.util.List;
 
 public class Login_Screen extends AppCompatActivity {
+    //Declaring variables
     private Button toAccountCreate;
     private EditText Username;
     private EditText Password;
@@ -36,13 +37,14 @@ public class Login_Screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login__screen);
 
-        // Declare vars
+        // Declare vars, linking to GUI
         Username = (EditText)findViewById(R.id.editText);
         Password = (EditText)findViewById(R.id.editText2);
         Info = (TextView)findViewById(R.id.textView9);
         toMenu = (Button)findViewById(R.id.button4);
         checkB = (AppCompatCheckBox)findViewById(R.id.hintpass);
 
+        //Create show/hide password checkbox
         checkB.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
@@ -64,10 +66,9 @@ public class Login_Screen extends AppCompatActivity {
             }
         });
 
+
+        //take to account creation page if click on create account
         toAccountCreate = findViewById(R.id.button2);
-
-
-
         toAccountCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View view){
@@ -85,6 +86,7 @@ public class Login_Screen extends AppCompatActivity {
         startActivity(intent2);
     }
 
+    //Validate username and password with the information in the database
     private void validate(String userName, String userPassword){
 
         Backend_UsersDatabase db;
@@ -104,8 +106,10 @@ public class Login_Screen extends AppCompatActivity {
         Runnable r = new Runnable() {
             @Override
             public void run() {
+                //count the remaining amount of login time when password or login ID is not correct
                 counter--;
                 Info.setText("Number of Attempts Remaining: " + String.valueOf(counter));
+                //prevents from logging in when more than 5 attempts
                 if(counter == 0){
                     toMenu.setEnabled(false);
                 }

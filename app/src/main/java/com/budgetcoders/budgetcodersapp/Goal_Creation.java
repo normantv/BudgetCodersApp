@@ -30,7 +30,7 @@ public class Goal_Creation extends AppCompatActivity {
 
         Intent intent = getIntent();
         final int intValue = intent.getIntExtra("totalAmount", 0);
-
+        //linking UI elements
         db = Backend_GoalsRoomDatabase.getDatabase(this);
 
         goalName = (EditText)findViewById(R.id.goalname);
@@ -57,7 +57,7 @@ public class Goal_Creation extends AppCompatActivity {
                 String GoalNamestring = goalName.getText().toString();
                 String BalanceGoalstring = balanceGoal.getText().toString();
                 int BalanceGoalint = Integer.parseInt(BalanceGoalstring);
-
+                //Stores goals into database
 
                 final Backend_Goals latest = new Backend_Goals(GoalNamestring, BalanceGoalint);
 
@@ -72,6 +72,7 @@ public class Goal_Creation extends AppCompatActivity {
             }
         });
 
+        //Set the update progress button to update the goal
         updateProgress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,6 +81,7 @@ public class Goal_Creation extends AppCompatActivity {
                 int minNum = goalList[0].getBalanceGoal();
                 int minObjectIndex = 0;
 
+                //Show the goal with minimum amount of money to reach
                 if (goalList.length != 0) {
                     for (int i = 0; i < goalList.length; i++) {
                         if (goalList[i].getBalanceGoal() < minNum && goalList[i].getBalanceGoal() > intValue) {
