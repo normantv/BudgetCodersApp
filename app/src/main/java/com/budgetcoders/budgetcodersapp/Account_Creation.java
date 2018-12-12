@@ -14,6 +14,7 @@ import java.lang.ref.WeakReference;
 
 public class Account_Creation extends AppCompatActivity {
 
+    // Declare variables
     private Button createAccount;
     private EditText Password;
     private EditText ConfirmPassword;
@@ -22,6 +23,7 @@ public class Account_Creation extends AppCompatActivity {
     private EditText LastName;
 
     //Backend_UsersDatabase db;
+    // Used to access the database of users
     Backend_UsersDatabase db;
 
     @Override
@@ -29,8 +31,10 @@ public class Account_Creation extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account__creation);
 
+        // gets info from the user database
         db = Backend_UsersDatabase.getDatabase(this);
 
+        // assign the values of UI elements
         FirstName = (EditText)findViewById(R.id.FName);
         LastName = (EditText)findViewById(R.id.LName);
         Password = (EditText)findViewById(R.id.PW);
