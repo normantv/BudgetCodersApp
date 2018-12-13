@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
     private Button ToLogin;
 
 
+    //Go to login screen when clicked on Get Started
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 

@@ -36,13 +36,14 @@ public class Login_Screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login__screen);
 
-        // Declare vars
+        // Declare vars and linking to UI
         Username = (EditText)findViewById(R.id.editText);
         Password = (EditText)findViewById(R.id.editText2);
         Info = (TextView)findViewById(R.id.textView9);
         toMenu = (Button)findViewById(R.id.button4);
         checkB = (AppCompatCheckBox)findViewById(R.id.hintpass);
 
+        //Create show/hide password checkbox
         checkB.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
@@ -64,6 +65,7 @@ public class Login_Screen extends AppCompatActivity {
             }
         });
 
+
         toAccountCreate = findViewById(R.id.button2);
 
 
@@ -78,13 +80,14 @@ public class Login_Screen extends AppCompatActivity {
     }
 
 
-
+    //take to account creation page if click on create account
     private void goToAccountCreate() {
 
         Intent intent2 = new Intent(this, Account_Creation.class);
         startActivity(intent2);
     }
 
+    //Validate username and password with the information in the database
     private void validate(String userName, String userPassword){
 
         Backend_UsersDatabase db;
